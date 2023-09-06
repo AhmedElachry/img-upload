@@ -1,3 +1,13 @@
+.App {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.uploader {
+  width: 50%;
+}
+
 section {
   padding: 2rem 0;
 }
@@ -39,6 +49,33 @@ img {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
 }
 
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.image:hover img {
+  opacity: 0.3;
+}
+
+.image:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #04aa6d;
+  color: white;
+  font-size: 16px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
 .image button {
   position: absolute;
   bottom: 0;
@@ -52,22 +89,6 @@ img {
 .image button:hover {
   background-color: red;
 }
-
-.image p {
-  padding: 0 0.5rem;
-  margin: 0;
-}
-
-label:hover,
-.upload-btn:hover {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-}
-
-.error {
-  text-align: center;
-}
-
-.error span {
-  color: red;
+.image-previewer {
+  width: 50%;
 }
